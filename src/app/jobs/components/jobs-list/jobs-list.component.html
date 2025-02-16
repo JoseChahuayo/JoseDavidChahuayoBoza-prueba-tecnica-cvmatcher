@@ -1,0 +1,6 @@
+<div class="h-[80vh] overflow-y-auto p-2 space-y-4">
+  @for (job of jobs(); track job.job_id) {
+  <job-card class="cursor-pointer bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow p-4" [job]="job"
+    (jobClick)="onJobClick(job)" />
+  }
+</div>
